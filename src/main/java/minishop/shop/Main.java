@@ -38,9 +38,14 @@ public class Main {
 
         //Create order
         createOrder(connection, dbProperties, 3, 1, 2, PaymentMethod.CASH.name());
+        String sql = dbProperties.getProperty("insert.into.002");
+        createProduct(connection, dbProperties, 4, "Price",1.23,sql);
+
+        sql = dbProperties.getProperty("select.into.001");
+//        createProduct(connection, dbProperties,5,"Hello", 1.4,sql );
 
         //report1
-        String sql = dbProperties.getProperty("select.into.001");
+
         String a = queryTableCustomer(connection, dbProperties, sql, 1);
 
         //showing to logs

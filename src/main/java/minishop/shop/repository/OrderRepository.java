@@ -137,7 +137,7 @@ public class OrderRepository implements OrderRepositoryIntf{
     public double finalCost(int productId, double priceRate) throws SQLException {
         double price = 0.0;
         Statement statement = connection.createStatement();
-        String sql = dbProperties.getProperty("select.into.011")+productId;
+        String sql = dbProperties.getProperty("select.into.011")+ productId;
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()){
             price = rs.getDouble("price");
