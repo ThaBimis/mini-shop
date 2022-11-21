@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Properties;
 
 @Log4j2
-public class CustomerRepository {
+public class CustomerRepository implements CustomerRepositoryIntf{
     private final Connection connection; //prosthesa final
 
 

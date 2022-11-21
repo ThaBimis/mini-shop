@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class OrderRepository {
+public class OrderRepository implements OrderRepositoryIntf{
 
     private final Connection connection; //prosthesa final
 

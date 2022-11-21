@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Properties;
 
 @Log4j2
-public class ProductRepository {
+public class ProductRepository implements ProductRepositoryIntf{
 
     private final Connection connection; //prosthesa final
     private final Properties dbProperties;
