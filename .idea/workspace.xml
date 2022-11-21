@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78773ae0-9491-403c-a527-cdc53272dc6f" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+    <list default="true" id="78773ae0-9491-403c-a527-cdc53272dc6f" name="Changes" comment="Added Structure with logger and packages">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initdb/initDbCustomers.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initdb/initDbOrders.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initdb/initDbProducts.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/dbconnection/DBConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/enums/CustomerCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/enums/PaymentMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CreateTables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CsvToDb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/CsvRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/CreateTablesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/CsvToDbService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/utils/UtilModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +61,27 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/bimistha/Downloads/mini-shop/src/main/resources"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/bimistha/Downloads/mini-shop/initdb"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bimistha\Downloads\mini-shop\src\main\resources" />
+      <recent name="C:\Users\bimistha\Downloads\mini-shop\initdb" />
+      <recent name="C:\Users\bimistha\Downloads\mini-shop\src\main\java\minishop\shop\service" />
+      <recent name="C:\Users\bimistha\Downloads\mini-shop\src\main\java\minishop\shop\repository" />
+      <recent name="C:\Users\bimistha\Downloads\mini-shop\src\main\java\minishop\shop\enums" />
+      <recent name="C:\Users\bimistha\Downloads\mini-shop\src\main\java\minishop\shop\model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="minishop.shop.utils" />
+      <recent name="minishop.shop.service" />
+      <recent name="minishop.shop.initdb" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="minishop.shop.Main" />
       <module name="mini-shop" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668962224014</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Structure with logger and packages">
+      <created>1668970802814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668970802814</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Added Structure with logger and packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Structure with logger and packages" />
   </component>
 </project>

@@ -1,0 +1,3 @@
+Id,CustomerId,ProductId,Amount,DateTime,PaymentMethod
+1,1,3,650,20-11-2022 14:18:32,CASH
+2,2,3,440,20-11-2022 14:18:32,CREDIT_CARD
