@@ -21,7 +21,9 @@ public class CustomerRepository implements CustomerRepositoryIntf{
         this.dbProperties = dbProperties;
 
     }
-
+    /**
+     * Returns a Customer object>.
+     * */
     public Customer getCustomer(int customerId) throws SQLException {
         Statement statement = connection.createStatement();
         String sql = dbProperties.getProperty("select.into.005") + customerId;
@@ -38,6 +40,9 @@ public class CustomerRepository implements CustomerRepositoryIntf{
         return customer;
     }
 
+    /**
+     * Returns a List with all the customers in a List<Customer>.
+     * */
     public List<Customer> getAllCustomers() throws SQLException {
         List<Customer> allCustomers = new ArrayList<>();
         Statement statement = connection.createStatement();
@@ -75,7 +80,9 @@ public class CustomerRepository implements CustomerRepositoryIntf{
 
     }
 
-
+/**
+ * Creates a customer into the table Customers and returns the Customer object.
+ * */
     public Customer createCustomer(int customerId, String name, String category) throws SQLException {
         String sql = dbProperties.getProperty("insert.into.001");
         PreparedStatement statement = connection.prepareStatement(sql);

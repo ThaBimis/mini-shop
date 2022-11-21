@@ -1,6 +1,7 @@
 package minishop.shop.utils;
 
 
+import minishop.shop.business.RunService;
 import minishop.shop.model.Customer;
 import minishop.shop.model.Order;
 import minishop.shop.model.Product;
@@ -106,5 +107,12 @@ public class UtilModule {
         CsvToDbService ar = new CsvToDbService(connection, dbProperties);
         ar.restoreDbOrders(connection, dbProperties);
     }
+
+    public static void runProgram(Connection connection, Properties dbProperties) throws SQLException, FileNotFoundException {
+        RunService ar = new RunService(connection, dbProperties);
+        ar.runReporting();
+    }
+
+
 
 }

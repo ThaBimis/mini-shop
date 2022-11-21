@@ -1,11 +1,13 @@
 package minishop.shop.initdb;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
-
-public class CreateTables {
+@Log4j2
+public class CreateTables implements CreateTablesIntf{
 
     private Connection connection;
     private Properties dbProperties;
@@ -25,6 +27,7 @@ public class CreateTables {
         statement.executeUpdate(sql);
         sql =  dbProperties.getProperty("create.table.003");
         statement.executeUpdate(sql);
+        log.info("Tables Created");
     }
 
 

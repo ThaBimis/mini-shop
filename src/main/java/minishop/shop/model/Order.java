@@ -2,6 +2,7 @@ package minishop.shop.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class Order {
 
@@ -20,6 +21,7 @@ public class Order {
     private String productName;
 
     private double totalPrice;
+    private List<Product> multipleProducts;
 
     public Order(int orderId, int customerId, int productId, String paymentMethod) {
         this.orderId = orderId;

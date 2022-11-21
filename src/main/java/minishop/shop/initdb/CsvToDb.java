@@ -12,7 +12,7 @@ import java.util.Properties;
 
 
 @Log4j2
-public class CsvToDb {
+public class CsvToDb implements CsvToDbIntf{
 
     private Connection connection;
     private Properties dbProperties;

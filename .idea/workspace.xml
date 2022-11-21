@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78773ae0-9491-403c-a527-cdc53272dc6f" name="Changes" comment="Added Structure model,service,repository,utils">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/CustomerRepositoryIntf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/OrderRepositoryIntf.java" afterDir="false" />
+    <list default="true" id="78773ae0-9491-403c-a527-cdc53272dc6f" name="Changes" comment="Added Interfaces for service,repository layers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/business/RunService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CreateTablesIntf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CsvToDbIntf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/CsvRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/CsvRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/dbconnection/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/dbconnection/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CreateTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CreateTables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CsvToDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/initdb/CsvToDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/CustomerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/service/CustomerServiceIntf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/CustomerServiceIntf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/service/FileServiceIntf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/FileServiceIntf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/service/OrderServiceIntf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/OrderServiceIntf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/service/ProductServiceIntf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/service/ProductServiceIntf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minishop/shop/utils/UtilModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minishop/shop/utils/UtilModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -105,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669021227811</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Interfaces for service,repository layers">
+      <created>1669022123872</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669022123872</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +139,7 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Added Structure with logger and packages" />
     <MESSAGE value="Added Structure model,service,repository,utils" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Structure model,service,repository,utils" />
+    <MESSAGE value="Added Interfaces for service,repository layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Interfaces for service,repository layers" />
   </component>
 </project>

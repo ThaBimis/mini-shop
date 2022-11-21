@@ -84,15 +84,17 @@ public class OrderRepository implements OrderRepositoryIntf{
         String categoryType = getCustomerCategory(customerId);
         double customerRate = getCustomerDiscount(categoryType);
         double finalCost = finalCost(productId, customerRate);
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String dateTime = now.format(format);
 
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, orderId);
         statement.setInt(2, customerId);
         statement.setInt(3, productId);
 
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        String dateTime = now.format(format);
+
+
         statement.setDouble(4, finalCost);
         statement.setString(5, dateTime);
         statement.setString(6, paymentMethod);
@@ -157,7 +159,7 @@ public class OrderRepository implements OrderRepositoryIntf{
                     appender+=",  ";
                 };
                 String columnValue = rs.getString(i);
-                System.out.print( rsmd.getColumnName(i) + ": "+ columnValue);
+                //System.out.print( rsmd.getColumnName(i) + ": "+ columnValue);
                 appender+=rsmd.getColumnName(i) + ": "+ columnValue;
 
         }
@@ -181,7 +183,7 @@ public class OrderRepository implements OrderRepositoryIntf{
                     appender+=",  ";
                 };
                 String columnValue = rs.getString(i);
-                System.out.print( rsmd.getColumnName(i) + ": "+ columnValue);
+                //System.out.print( rsmd.getColumnName(i) + ": "+ columnValue);
                 appender+=rsmd.getColumnName(i) + ": "+ columnValue;
 
             }

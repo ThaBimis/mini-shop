@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
+import java.util.Scanner;
 
 import static minishop.shop.utils.UtilModule.*;
 
@@ -25,28 +26,40 @@ public class Main {
 
         initialize();
         createTables(connection, dbProperties);
-        log.info("Tables Created");
-        restoreDbCustomers(connection, dbProperties);
-        restoreDbProducts(connection,dbProperties);
-        restoreDbOrders(connection, dbProperties);
+        restoreDb();
         runBusiness();
+//        runProgram(connection, dbProperties);
     }
 
 
     private static void runBusiness() throws SQLException, FileNotFoundException {
-        createCustomer(connection, dbProperties, 5,"Thanasis Bimis", CustomerCategory.Individual.name()); //create a new customer
+        //Create customer
+        createCustomer(connection, dbProperties, 5,"Thanasis Bimis", CustomerCategory.Individual.name());
 
-        createOrder(connection, dbProperties, 4, 1, 2, PaymentMethod.CASH.name());
+        //Create order
+        createOrder(connection, dbProperties, 3, 1, 2, PaymentMethod.CASH.name());
 
+        //report1
         String sql = dbProperties.getProperty("select.into.001");
         String a = queryTableCustomer(connection, dbProperties, sql, 1);
+
+        //showing to logs
         log.info("Total no of purchases for particular customer {}", a);
+
+        //saving to txt
         saveAllOrdersToFileTxt(a, "customer_sums");
 
+        //report2
         sql = dbProperties.getProperty("select.into.012");
         a = queryTableCustomer(connection, dbProperties, sql, 3);
+
+        //showing to logs
         log.info("Total no of purchases for particular product {}", a);
+
+        //saving to txt
         saveAllOrdersToFileTxt(a, "product_sums");
+
+
     }
 
     private static  void initialize(){
@@ -54,5 +67,13 @@ public class Main {
         connection = connector.getConnection();
         dbProperties = connector.getDbProperties();
     }
+
+    private static void restoreDb() throws SQLException {
+        restoreDbCustomers(connection, dbProperties);
+        restoreDbProducts(connection,dbProperties);
+        restoreDbOrders(connection, dbProperties);
+    }
+
+
 
 }

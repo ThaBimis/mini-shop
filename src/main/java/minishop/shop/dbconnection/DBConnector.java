@@ -96,4 +96,12 @@ public class DBConnector {
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
+
+    public void alterTable(Connection connection, String databaseName) throws SQLException{
+        Statement s = connection.createStatement();
+        String sql = dbProperties.getProperty("alter.table.001");
+        s.executeUpdate(sql+" "+databaseName);
+        sql = dbProperties.getProperty("alter.table.002");
+        s.executeUpdate(sql+" "+databaseName);
+    }
 }

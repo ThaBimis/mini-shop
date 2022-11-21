@@ -10,13 +10,13 @@ import java.util.Properties;
 
 public interface ProductServiceIntf {
 
-    public Product findProductWithId(int ProductId) throws SQLException;
+    Product findProductWithId(int ProductId) throws SQLException;
 
-    public List<Product> findAllProducts() throws SQLException;
+    List<Product> findAllProducts() throws SQLException;
 
-    public Product createProduct(int ProductId, String name, double price, String sql) throws SQLException;
+    Product createProduct(int ProductId, String name, double price, String sql) throws SQLException;
 
-    public void updateProduct(int ProductId, String ProductName, double price, String sql) throws SQLException;
+    void updateProduct(int ProductId, String ProductName, double price, String sql) throws SQLException;
 
-    public void deleteProduct(int ProductId) throws SQLException;
+    void deleteProduct(int ProductId) throws SQLException;
 }

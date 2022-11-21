@@ -9,13 +9,13 @@ import java.util.Properties;
 
 public interface CustomerServiceIntf {
 
-    public Customer findCustomerWithId(int customerId) throws SQLException;
+    Customer findCustomerWithId(int customerId) throws SQLException;
 
-    public List<Customer> findAllCustomers() throws SQLException;
+    List<Customer> findAllCustomers() throws SQLException;
 
-    public Customer createCustomer(int customerId, String name, String category) throws SQLException;
+    Customer createCustomer(int customerId, String name, String category) throws SQLException;
 
-    public void updateCustomer(int customerId, String customerName, String sql) throws SQLException;
+    void updateCustomer(int customerId, String customerName, String sql) throws SQLException;
 
-    public void deleteCustomer(int customerId) throws SQLException;
+    void deleteCustomer(int customerId) throws SQLException;
 }
